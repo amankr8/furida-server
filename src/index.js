@@ -15,6 +15,7 @@ app.use(cors())
 app.use('/posts', require('./components/routes/posts'))
 app.use('/messages', require('./components/routes/messages'))
 app.use('/users', require('./components/routes/users'))
+app.use('/info', require('./components/routes/info'))
 
 app.get('/', (req, res) => {
   res.render('index')

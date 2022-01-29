@@ -2,6 +2,7 @@ const express = require('express');
 const { getPosts, createPost, updatePost, deletePost, deletePosts } = require('../controllers/posts');
 const router = express.Router();
 const upload = require('../../helpers/storage');
+
 const auth = require('../../middleware/auth');
 
 router.get('/', getPosts);

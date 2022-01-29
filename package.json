@@ -4,6 +4,7 @@
   "description": "server side of furida web app",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon src/index.js",
     "start": "node src/index.js"
   },
   "keywords": [],
