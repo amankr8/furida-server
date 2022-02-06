@@ -3,8 +3,8 @@ var path = require('path')
 
 exports.deleteFile = async (filename) => {
     try {
-        await fs.unlinkSync(path.join('public/uploads/posts', filename))
-        console.log('Associated image deleted!')
+        await fs.unlinkSync(path.join('public/uploads', filename))
+        console.log('Associated file deleted!')
     } catch (err) {
         console.error(err)
     }
@@ -12,9 +12,9 @@ exports.deleteFile = async (filename) => {
 
 exports.deleteFiles = async () => {
     try {
-        const files = await fs.readdirSync('public/uploads/posts')
+        const files = await fs.readdirSync('public/uploads')
         for(const file of files) {
-            await fs.unlinkSync(path.join('public/uploads/posts', file))
+            await fs.unlinkSync(path.join('public/uploads', file))
         }
         console.log('All associated images deleted!')
     } catch (err) {
